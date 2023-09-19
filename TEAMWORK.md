@@ -1,8 +1,7 @@
 # Teamwork Contract
 
-> Division of Labour: 
-blablav paragraphe
+> Division of Labour: :+1:
 
-> Timing:
+> Timing: :rocket:
 
-> Communication: 
+> Communication: :tada:
