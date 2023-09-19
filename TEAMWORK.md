@@ -14,4 +14,4 @@
 - We are planning on meeting *_Tuesdays after class_* when needed to complete the milestone and the final submission.
 - We will use Slack to discuss when we can meet to complete milestones.
 - We will use Github Issues to resolve issues in our files.
-- We are planning to answer each other as fast as possible and to work together to fix issues as they come up.
+- We are planning to answer each other's Slack messages as fast as possible and to work together to fix issues on Github as they come up.
