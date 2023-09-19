@@ -6,6 +6,8 @@
 - We will ensure that we submit each assignment to our branch first then merge to the main branch
 
 
-> Timing: :rocket:
+> ##*Timing:* :rocket:
+- We will respond to each other’s requests and review their work within **12 hours**.
+
 
 > Communication: :tada:
