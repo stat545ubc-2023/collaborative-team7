@@ -4,6 +4,10 @@
 
 - We will ensure that we complete each objective of the assignments.
 - We will ensure that we submit each assignment to our branch first then merge to the main branch
+- For this milestone specifically:
+  - Teamwork contract: all members
+  - Troubleshooting document: Fanny, Eully, Ruichen
+  - README: Raveen
 
 
 > ## *Timing:* :rocket:
