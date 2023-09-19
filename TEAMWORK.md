@@ -1,4 +1,4 @@
-#Teamwork Contract
+# Teamwork Contract
 
 > Division of Labour: 
 blablav paragraphe
