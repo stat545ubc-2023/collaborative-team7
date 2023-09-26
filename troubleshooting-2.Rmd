@@ -17,12 +17,18 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 
 ```{r}
 ### ERROR HERE ###
-load.packages(dslabs)
-load.packages(tidyverse)
-load.packages(stringr)
+install.packages('dslabs')
+install.packages('tidyverse')
+install.packages('stringr')
 install.packages("devtools") # Do not run this if you already have this package installed! 
 devtools::install_github("JoeyBernhardt/singer")
-load.packages(gapminder)
+install.packages('gapminder')
+install.packages('dplyr')
+library(dslabs)
+library(tidyverse)
+library('stringr')
+library("devtools")
+library('gapminder')
 ```
 
 Let's have a look at the dataset! My goal is to:
@@ -36,6 +42,8 @@ Let's have a look at the dataset! My goal is to:
 class(dslabs::movielens)
 movieLens <- as_tibble(dslabs::movielens)
 dim(movieLens)
+glimpse(movieLens)
+class(movieLens)
 ```
 
 Now that we've had a quick look at the dataset, it would be interesting to explore the rows (observations) in some more detail. I'd like to consider the movie entries that...
@@ -51,7 +59,7 @@ Now that we've had a quick look at the dataset, it would be interesting to explo
 filter(movieLens, genres == "Drama")
 filter(movieLens, !genres == "Drama")
 filter(movieLens, year >= 2000)
-filter(movieLens, year == 1999 | month == 2000)
+filter(movieLens, year == 1999 | year == 2000)
 filter(movieLens, rating > 4.5, year < 1995)
 ```
 
