@@ -79,15 +79,15 @@ Some of the variables in the `movieLens` dataset are in *camelCase* (in fact, *m
 ```{r}
 ### ERROR HERE ###
 movieLens <- movieLens %>%
-  rename(userId = user_id,
-        movieId = movie_id)
+  rename(user_id = userId,
+        movie_id = movieId)
 ```
 
 As you already know, `mutate()` defines and inserts new variables into a tibble. There is *another mystery function similar to `mutate()`* that adds the new variable, but also drops existing ones. I wanted to create an `average_rating` column that takes the `mean(rating)` across all entries, and I only want to see that variable (i.e drop all others!) but I forgot what that mystery function is. Can you remember?
 
 ```{r}
 ### ERROR HERE ### 
-summarise(movieLens,
+summarise(movieLens %>% group_by(title),
        average_rating = mean(rating))
 ```
 
@@ -108,7 +108,7 @@ Without using `group_by()`, I want to find out how many movie reviews there have
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  tally(year)
+  count(year)
 ```
 
 Both `count()` and `tally()` can be grouped by multiple columns. Below, I want to count the number of movie reviews by title and rating, and sort the results.
@@ -116,7 +116,7 @@ Both `count()` and `tally()` can be grouped by multiple columns. Below, I want t
 ```{r}
 ### ERROR HERE ###
 movieLens %>%
-  count(c(title, rating), sort = TRUE)
+  count(title, rating, sort = TRUE)
 ```
 
 Not only do `count()` and `tally()` quickly allow you to count items within your dataset, `add_tally()` and `add_count()` are handy shortcuts that add an additional columns to your tibble, rather than collapsing each group.
