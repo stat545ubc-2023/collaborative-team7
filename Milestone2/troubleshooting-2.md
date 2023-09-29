@@ -26,67 +26,15 @@ required packages.
 ``` r
 ### ERROR HERE ###
 # no need to install again if already installed
-install.packages('dslabs')
-```
+# install.packages('dslabs')
+# install.packages('tidyverse')
+# install.packages('stringr')
+# install.packages("devtools") 
+# devtools::install_github("JoeyBernhardt/singer")
+# install.packages('gapminder')
+# install.packages('dplyr')
+# Do not run this above if you already have this package installed! 
 
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
-install.packages('tidyverse')
-```
-
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
-install.packages('stringr')
-```
-
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
-install.packages("devtools") # Do not run this if you already have this package installed! 
-```
-
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
-devtools::install_github("JoeyBernhardt/singer")
-```
-
-    ## Skipping install of 'singer' from a github remote, the SHA1 (2b4fe9cb) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
-
-``` r
-install.packages('gapminder')
-```
-
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
-install.packages('dplyr')
-```
-
-    ## 将程序包安装入'C:/Users/yaoru/AppData/Local/R/win-library/4.3'
-    ## (因为'lib'没有被指定)
-
-    ## Error in contrib.url(repos, "source"): 试试在不设定镜像的情况下用CRAN
-
-``` r
 library(dslabs)
 library(tidyverse)
 ```
@@ -96,8 +44,7 @@ library(tidyverse)
     ## ✔ forcats   1.0.0     ✔ stringr   1.5.0
     ## ✔ ggplot2   3.4.3     ✔ tibble    3.2.1
     ## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-    ## ✔ purrr     1.0.2
-
+    ## ✔ purrr     1.0.2     
     ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
     ## ✖ dplyr::filter() masks stats::filter()
     ## ✖ dplyr::lag()    masks stats::lag()
@@ -335,25 +282,24 @@ I forgot what that mystery function is. Can you remember?
 
 ``` r
 ### ERROR HERE ###
-# We try to calculate the average rate of each movie
-summarise(movieLens %>% group_by(title),
+transmute(movieLens,
        average_rating = mean(rating))
 ```
 
-    ## # A tibble: 8,832 × 2
-    ##    title                              average_rating
-    ##    <chr>                                       <dbl>
-    ##  1 "\"Great Performances\" Cats"                1.75
-    ##  2 "$9.99"                                      3.83
-    ##  3 "'Hellboy': The Seeds of Creation"           2   
-    ##  4 "'Neath the Arizona Skies"                   0.5 
-    ##  5 "'Round Midnight"                            2.25
-    ##  6 "'Salem's Lot"                               3.5 
-    ##  7 "'Til There Was You"                         2.62
-    ##  8 "'burbs, The"                                3.05
-    ##  9 "'night Mother"                              5   
-    ## 10 "(500) Days of Summer"                       3.76
-    ## # ℹ 8,822 more rows
+    ## # A tibble: 100,004 × 1
+    ##    average_rating
+    ##             <dbl>
+    ##  1           3.54
+    ##  2           3.54
+    ##  3           3.54
+    ##  4           3.54
+    ##  5           3.54
+    ##  6           3.54
+    ##  7           3.54
+    ##  8           3.54
+    ##  9           3.54
+    ## 10           3.54
+    ## # ℹ 99,994 more rows
 
 ## Exercise 3: Calculating with `summarise()`-like functions
 

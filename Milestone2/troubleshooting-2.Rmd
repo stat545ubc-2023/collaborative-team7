@@ -18,13 +18,15 @@ Note that errors are not all syntactic (i.e., broken code)! Some are logical err
 ```{r}
 ### ERROR HERE ###
 # no need to install again if already installed
-install.packages('dslabs')
-install.packages('tidyverse')
-install.packages('stringr')
-install.packages("devtools") # Do not run this if you already have this package installed! 
-devtools::install_github("JoeyBernhardt/singer")
-install.packages('gapminder')
-install.packages('dplyr')
+# install.packages('dslabs')
+# install.packages('tidyverse')
+# install.packages('stringr')
+# install.packages("devtools") 
+# devtools::install_github("JoeyBernhardt/singer")
+# install.packages('gapminder')
+# install.packages('dplyr')
+# Do not run this above if you already have this package installed! 
+
 library(dslabs)
 library(tidyverse)
 library('stringr')
@@ -89,8 +91,7 @@ As you already know, `mutate()` defines and inserts new variables into a tibble.
 
 ```{r}
 ### ERROR HERE ###
-# We try to calculate the average rate of each movie
-summarise(movieLens %>% group_by(title),
+transmute(movieLens,
        average_rating = mean(rating))
 ```
 
